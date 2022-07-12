@@ -1,4 +1,4 @@
-import { Switch } from 'antd';
+import  Switch  from 'react-switch';
 import React from 'react';
 
 import Header from './Header';
@@ -18,7 +18,14 @@ const Layout = () => {
 				<Switch
 					onChange={()=>{}}
 					checked
-					size='small'
+					height={20}
+					width={40}
+					checkedIcon={false}
+					uncheckedIcon={false}
+					handleDiameter={20}
+					offColor="#fff"
+					onColor="#232323"
+
 
 
 				/>
