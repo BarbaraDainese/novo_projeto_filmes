@@ -1,33 +1,35 @@
 import  Switch  from 'react-switch';
-import React from 'react';
+import React, { useContext } from 'react';
 
 import Header from './Header';
+import { ThemeContext } from 'styled-components';
 
 
-
+type Props = {
+	onChangeTheme: () => void;
+}
 
 
 // import { Container } from './styles';
 
 
-const Layout = () => {
+const Layout = ({onChangeTheme}:Props) => {
+	const {name, colors } = useContext(ThemeContext);
+
 	return (
 		<div>
 			<Header>
 				<h1>Prime Flix</h1>
 				<Switch
-					onChange={()=>{}}
-					checked
+					onChange={onChangeTheme}
+					checked={name=="light"}
 					height={20}
 					width={40}
 					checkedIcon={false}
 					uncheckedIcon={false}
 					handleDiameter={20}
-					offColor="#fff"
-					onColor="#232323"
-
-
-
+					offColor={colors.secondary}
+					onColor={colors.secondary}
 				/>
 			</Header>
 		</div>
