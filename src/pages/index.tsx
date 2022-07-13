@@ -16,6 +16,7 @@ const HomePage = () => {
 	return (
 		<div>
 			<ThemeProvider theme={theme}>
+
 			<Layout onChangeTheme={onChangeTheme}/>
 			<h1>Bem Vindo</h1>
 

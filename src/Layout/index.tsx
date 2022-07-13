@@ -3,6 +3,7 @@ import React, { useContext } from 'react';
 
 import Header from './Header';
 import { ThemeContext } from 'styled-components';
+import { Container, Content, LeftContent, RightContent } from './styles';
 
 
 type Props = {
@@ -10,7 +11,7 @@ type Props = {
 }
 
 
-// import { Container } from './styles';
+
 
 
 const Layout = ({onChangeTheme}:Props) => {
@@ -18,6 +19,7 @@ const Layout = ({onChangeTheme}:Props) => {
 
 	return (
 		<div>
+			<Container>
 			<Header>
 				<h1>Prime Flix</h1>
 				<Switch
@@ -32,6 +34,11 @@ const Layout = ({onChangeTheme}:Props) => {
 					onColor={colors.secondary}
 				/>
 			</Header>
+			<Content>
+				<LeftContent/>
+				<RightContent/>
+			</Content>
+			</Container>
 		</div>
 
 

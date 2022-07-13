@@ -8,7 +8,6 @@ const Header = (Props) => {
 
 			<Container>
 				{Props.children}
-
 			</Container>
 
 	);
